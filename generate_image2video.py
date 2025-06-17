@@ -63,12 +63,12 @@ def latent_to_video(decoder, latent_seq, video_path, fps=25):
 
 if __name__ == "__main__":
     latent_dim = 32
-    seq_len = 100  # 생성 프레임 수
+    seq_len = 1000  # 생성 프레임 수
     noise_std = 0.01  # 노이즈 강도 조절
 
-    vae_checkpoint = './vae_checkpoints/vae_epoch_50.pth'
-    lstm_checkpoint = './lstm_checkpoints/lstm_epoch_30.pth'
-    input_image_path = './walking_frames/person01_walking_d1_uncomp_frame060.png'  # 예시
+    vae_checkpoint = './vae_checkpoints/vae_epoch_90.pth'
+    lstm_checkpoint = './lstm_checkpoints/lstm_epoch_1170.pth'
+    input_image_path = './walking_frames/person01_walking_d1_uncomp_frame030.png'  # 예시
 
     transform = transforms.Compose([
         transforms.ToTensor(),
